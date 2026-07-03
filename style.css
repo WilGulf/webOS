@@ -1,0 +1,149 @@
+html * {
+    font-family: SF Pro Display, SF Pro Icons;
+}
+
+body {
+    position: relative;
+}
+
+.div1 {
+    border-radius: 25px 25px 0 0;
+    background-color: #73AD21;
+    padding: 20px;
+}
+
+.topbar {
+    border-radius: 25px 25px 0 0;
+    background-color: transparent;
+    color: white;
+
+    display: flex; 
+
+    position: absolute;
+    padding: 4px 0;
+
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.window {
+    position: absolute;
+}
+
+.windowcontent {
+    border-radius: 0 0 25px 25px;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px;
+    color: white;
+    max-width: 250px;
+}
+
+.windowbar {
+    border-radius: 25px 25px 0 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.windowtitle {
+    margin-left: auto;
+    margin-right: 16px;
+}
+
+.closebutton {
+    img {
+        width: 32px;
+        height: 32px;
+        filter: invert(14%) sepia(100%) saturate(3000%) hue-rotate(0deg);
+    }
+
+    margin-left: 8px;
+    margin-right: 2px;
+    margin-top: 8px;
+}
+
+.minimizebutton {
+    img {
+        width: 32px;
+        height: 32px;
+        filter: brightness(0) saturate(100%) invert(84%) sepia(90%) saturate(600%) hue-rotate(10deg);
+    }
+
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 8px;
+}
+
+.fullscreenbutton {
+    img {
+        width: 32px;
+        height: 32px;
+        filter: brightness(0) saturate(100%) invert(63%) sepia(94%) saturate(3000%) hue-rotate(80deg);
+    }
+    margin-left: 2px;
+    margin-right: 8px;
+    margin-top: 8px;
+}
+
+.dock {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    
+    border-radius: 20px 20px 20px 20px;
+
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+
+    padding: 4px 0;
+}
+
+.appicon-left {
+    width: 64px;
+    height: 64px;
+    margin-left: 8px;
+    margin-right: 2px;
+}
+
+.appicon-right {
+    width: 64px;
+    height: 64px;
+    margin-left: 2px;
+    margin-right: 8px;
+}
+
+.appicon-center {
+    width: 64px;
+    height: 64px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 0 25px;
+    padding: 20px;
+    max-width: 250px;
+}
+
+.sidebartitle {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sidebaritem {
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0);
+    margin: 4px 0;
+}
+
+.maincontent {
+    background-color: white;
+    border-radius: 0 0 25px 0;
+    color: black;
+    padding: 20px;
+}

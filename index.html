@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body style="background-color: #000000;">
+
+        <div class="div1" style="background-image: url(images/monterey.jpg);
+        height: 100vh;
+        background-size: cover;">
+            
+            <div class="topbar" style="justify-content: space-between;">
+
+                <p style="margin-left: 32px;">
+                    webOS
+                </p>
+                <p style="margin-right: 32px;">
+                    <span id="timeElement"></span>
+                </p>
+                <script>
+                    function updateTime() {
+                        var currentTime = new Date().toLocaleString();
+                        var timeText = document.querySelector("#timeElement");
+                        timeText.innerHTML = currentTime;
+                    }
+                    setInterval(updateTime, 1000);
+                </script>
+            </div>
+
+            <div id="welcome" class="window">
+                <div id="welcomeheader" class="windowbar" style="display: flex">
+                    <p style="cursor: pointer" id="welcomeclose" class="closebutton">
+                        <img src="images/close.png">
+                    </p>
+                    <p style="cursor: pointer" id="welcomeminimize" class="minimizebutton">
+                        <img src="images/minimize.png">
+                    </p>
+                    <p style="cursor: pointer" id="welcomefullscreen" class="fullscreenbutton">
+                        <img src="images/fullscreen.png">
+                    </p>
+                    
+                    <p class="windowtitle"> 
+                        First App
+                    </p>
+                </div>
+
+                <div class="windowcontent">
+                    <p>
+                        Welcome to webOS!<br>
+                        This is a simple web-based operating system interface trying to mimic macOS.<br>
+                    </p>
+                </div>
+            </div>
+
+            <div id="finder" class="window">
+                <div id="finderheader" class="windowbar" style="display: flex">
+                    <p style="cursor: pointer" id="finderclose" class="closebutton">
+                        <img src="images/close.png">
+                    </p>
+                    <p style="cursor: pointer" id="finderminimize" class="minimizebutton">
+                        <img src="images/minimize.png">
+                    </p>
+                    <p style="cursor: pointer" id="finderfullscreen" class="fullscreenbutton">
+                        <img src="images/fullscreen.png">
+                    </p>
+                    
+                    <p class="windowtitle"> 
+                        Finder
+                    </p>
+                </div>
+
+                <div style="background: transparent; display: flex;">
+                    <div class="sidebar">
+                        <p class="sidebartitle">Favorites</p>
+                        <p class="sidebaritem" id="applications">Applications</p>
+                        <p class="sidebaritem" id="desktop">Desktop</p>
+                        <p class="sidebaritem" id="documents">Documents</p>
+                        <p class="sidebaritem" id="downloads">Downloads</p>
+                    </div>
+                    <div class="maincontent">
+                        <p id="foldername">
+                            
+                        </p>
+                    </div>
+                </div>
+
+                <script src="finder.js"></script>
+            </div>
+
+            <div class="dock">
+                <div class="dockitem">
+                    <img src="apps/finder.png" alt="Finder" class="appicon-left" id="finderopen">
+                    <img src="apps/terminal.png" alt="Terminal" class="appicon-center">
+                    <img src="apps/launcher.png" alt="Launcher" class="appicon-right">
+                </div>
+            </div>
+
+            <script src="script.js"></script>
+
+        </div>
+
+    </body>
+</html>
